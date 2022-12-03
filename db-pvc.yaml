@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: VolumenPersistenteClaim
+metadata:
+  name: mysql-pervol-claim
+spec:
+  storageClassName: str
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 4Gi

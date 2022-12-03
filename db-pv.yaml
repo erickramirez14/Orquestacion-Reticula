@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: VolumenPersistente
+metadata:
+  name: mysql-pervol
+  labels:
+    type: local
+spec:
+  storageClassName: strg
+  capacity:
+    storage: 4Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/data"

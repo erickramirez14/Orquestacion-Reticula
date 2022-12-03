@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: materias
+  labels:
+    app: reticula-api
+spec:
+  selector:
+    matchLabels:
+      app: reticula-api
+  replicas: 7
+  template:
+    metadata:
+      labels:
+        app: reticula-api
+    spec:
+      containers:
+        - name: reticula-api
+          image: erickramirez14/reticula-api:1.0
+          ports:
+            - containerPort: 80
